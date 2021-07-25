@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F1F5F8;
+            width: 100vw;
+            height: 100vh;
+            font-family: Roboto, sans-serif;
+        }
+
+        #counter {
+            width: 500px;
+            height: 400px;
+            color: #102A42;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        .result {
+            font-size: 8rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            letter-spacing: 3px;
+            font-size: 1rem;
+            border-radius: 10px;
+            border-color: #102A42;
+            transition: all 0.5s;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: black;
+            color: #ffff;
+        }
+
+        @media (max-width:500px) {
+            html {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width:400px) {
+            html {
+                font-size: 10px;
+            }
+
+            .buttons {
+                flex-direction: column-reverse;
+                margin: auto;
+                width: 150px;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="counter">
+        <h1>Counter</h1>
+        <p class="result">0</p>
+        <div class="buttons">
+            <button class="btn decrease">DECREASE</button>
+            <button class="btn reset">RESET</button>
+            <button class="btn increase">INCREASE</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
